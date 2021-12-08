@@ -1,8 +1,8 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://rm-bp164n8m5e78q3zul1o.mysql.rds.aliyuncs.com/history_today?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimeZone=GMT+8
-    username: lzx
-    password: LZX990601lzx
+    url: 
+    username: 
+    password: 
 server:
   port: 8001
