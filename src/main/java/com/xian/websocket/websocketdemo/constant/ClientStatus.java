@@ -12,4 +12,6 @@ public interface ClientStatus {
     String WAIT = "1";
 
     String READY = "2";
+
+    String RUN = "3";
 }
