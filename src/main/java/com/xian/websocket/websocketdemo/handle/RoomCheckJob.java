@@ -19,12 +19,12 @@ import java.util.Iterator;
 @Component
 public class RoomCheckJob {
 
-    @Scheduled(cron = "0/10 * * * * *")
+    @Scheduled(cron = "0/15 * * * * *")
     public void run() {
         log.info("检查房间情况{}",WebSessionManager.rooms);
         Iterator<PkRoom> iterator = WebSessionManager.rooms.iterator();
         // 当房间列表存在10个以上时，开启空闲房间清除
-        while (iterator.hasNext() && WebSessionManager.rooms.size() > RobotName.ROOM_NUM_CLEAR) {
+        while (iterator.hasNext() && WebSessionManager.rooms.size() >= RobotName.ROOM_NUM_CLEAR) {
             PkRoom next = iterator.next();
             if (StringUtils.isNullOrEmpty(next.getSessionOne()) && StringUtils.isNullOrEmpty(next.getSessionTwo())) {
                 log.info("清除空闲房间");

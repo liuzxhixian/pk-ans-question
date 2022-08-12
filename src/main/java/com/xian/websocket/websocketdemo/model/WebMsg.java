@@ -17,8 +17,14 @@ public class WebMsg implements Serializable {
 
     private String username;
 
+    /**
+     * 消息类型   MsgType
+     */
     private String type;
 
+    /**
+     * 内容
+     */
     private Object data;
 
     /**

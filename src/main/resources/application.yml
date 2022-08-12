@@ -3,6 +3,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: 
     username: 
-    password: 
+    password:
+  application:
+    name: pk-ans-question
 server:
   port: 8001
