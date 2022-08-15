@@ -44,9 +44,12 @@ public class WebMsgHandler {
         if (webMsg == null || StringUtils.isNullOrEmpty(webMsg.getUsername())) {
             // 消息为空或者用户名为空
             log.info("消息错误{}",webMsg);
+            throw new RuntimeException("消息错误");
         }
         TextMessage result = null;
+        // 消息类型
         String type = webMsg.getType();
+        // 用户昵称
         String username = webMsg.getUsername();
         if (MsgType.REGISTER.equals(type)) {
             // 处理注册消息

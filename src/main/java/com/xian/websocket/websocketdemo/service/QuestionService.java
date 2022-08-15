@@ -19,4 +19,7 @@ public interface QuestionService extends IService<QuestionModel> {
      * @return
      */
     List<QuestionModel> listRandomQuestion(Integer number);
+
+
+    int addQuestionList(List<QuestionModel> list);
 }

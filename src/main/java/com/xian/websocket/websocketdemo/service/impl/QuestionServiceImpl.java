@@ -32,4 +32,10 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionDao, QuestionModel>
         baseMapper.selectPage(page,null);
         return page.getRecords();
     }
+
+    @Override
+    public int addQuestionList(List<QuestionModel> list) {
+        saveBatch(list);
+        return 0;
+    }
 }
